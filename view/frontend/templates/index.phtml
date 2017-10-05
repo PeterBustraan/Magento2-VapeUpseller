@@ -1,0 +1,33 @@
+<div class="vapeCalc">
+    <div class="ohmCalculator">
+        <span class="ohmLaws"><label>Volts : </label><input type="text" maxlength="4" name="volts" id="volts" value="0.0"></span>
+        <span class="ohmLaws"><label>Ohms  : </label><input type="text" maxlength="4" name="ohms"  id="ohms" value="0.0"></span>
+        <span class="ohmLaws"><label>AMPS  : </label><input type="text" maxlength="4" name="amps"  id="amps" value="0.0"></span>
+        <span class="ohmLaws"><label>WATTS : </label><input type="text" maxlength="4" name="watts" id="watts" value="0.0"></span>
+            <div class="primary" id="primaryButton">
+                <button  type="submit" class="action submit primary" title="<?php echo __('Submit') ?>">
+                    <span><?php echo __('Submit') ?></span>
+                </button>
+            </div>
+    </div>
+    <div class="wireCalc">
+        Ohms  : <input type="text" maxlength="4" name="ohms" value="0.0<?php //echo $this->volts ?>"><br>
+        <select name="material" id="material">
+            <option value="Kanthal">Kanthal</option>
+            <option value="Stainless Steel">Stainless Steel</option>
+            <option value="Titanium">Titanium</option>
+            <option value=""></option>
+        </select>
+    </div>
+    <div class="wireRecomendor">
+        <div class="preview">
+        </div>
+        <div class="recmendedItems">
+        </div>
+    </div>
+</div>
+
+<script type="application/x-javascript">
+    require(['jquery'], function($){
+        main($ , "<?php echo $block->ajaxUrl(); ?>");})
+</script>

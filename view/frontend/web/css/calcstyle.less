@@ -1,0 +1,50 @@
+.vapeCalc {
+  @media screen
+  {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 769px)
+    {
+      display: block;
+    }
+  }
+}
+
+.ohmCalculator{
+  @media screen {
+    width: 30%;
+    margin-right: 5rem;
+
+    @media (max-width: 769px)
+    {
+      width: auto;
+      margin: auto;
+    }
+
+    .ohmLaws {
+      display: flex;
+      justify-content: flex-end;
+
+      label {
+        margin-right: 2rem;
+        font-size : 2rem;
+      }
+
+      input {
+        width: 60%;
+      }
+    }
+
+    .primary {
+      padding: 5rem 0rem;
+
+      button {
+        width: 100%;
+        font-size: 4rem;
+      }
+
+    }
+  }
+
+}

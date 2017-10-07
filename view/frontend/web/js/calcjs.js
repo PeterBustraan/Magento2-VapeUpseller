@@ -1,12 +1,16 @@
 function main($, AjaxUrl) {
-    var ajax_url = AjaxUrl;
+    let ajax_url = AjaxUrl;
         $("#primaryButton").click( function()
         {
             OhmsLaw()
+        });
+
+        $(".calcReset").click(function () {
+            clearField("#" + $(this).data("field"))
         })
 
     function OhmsLaw() {
-        var details =
+        let details =
             {
                 'volts' : $("#volts").val(),
                 'amps'  : $("#amps").val(),
@@ -24,6 +28,10 @@ function main($, AjaxUrl) {
             $("#ohms").val(data.ohms)
             $("#watts").val(data.watts)
         })
+    }
+
+    function clearField(field) {
+        $(field).val('0.0');
     }
 
 };

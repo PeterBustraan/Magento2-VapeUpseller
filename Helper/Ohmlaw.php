@@ -6,7 +6,7 @@
  * Time: 2:25 PM
  */
 
-namespace PeterBustraan\VapeCalculator\Model;
+namespace PeterBustraan\VapeCalculator\Helper;
 
 
 class Ohmlaw
@@ -29,19 +29,19 @@ class Ohmlaw
     {
         try
         {
-            if (is_numeric($this->watts) && $this->watts > 0)
+            if ((is_numeric($this->watts) && $this->watts > 0.0))
             {
                 $this->powerTriangles();
             }
-            elseif (is_numeric($this->volts) && $this->volts > 0)
+            elseif ((is_numeric($this->volts) && $this->volts > 0.0))
             {
                 $this->voltsTriangles();
             }
-            elseif (is_numeric($this->ohms) && $this->ohms > 0)
+            elseif ((is_numeric($this->ohms) && $this->ohms > 0.0))
             {
                 $this->resistanceTriangles();
             }
-            elseif (is_numeric($this->amps) && $this->amps > 0)
+            elseif ((is_numeric($this->amps) && $this->amps > 0.0))
             {
                 $this->drainTriangles();
             }
@@ -87,7 +87,7 @@ class Ohmlaw
             $this->watts = pow($this->volts,2) / $this->ohms;
             $this->amps  = $this->volts / $this->ohms;
         }
-        elseif (($this->amps) && $this->amps > 0)
+        elseif (is_numeric($this->amps) && $this->amps > 0)
         {
             $this->watts = $this->volts * $this->amps;
             $this->ohms  = $this->volts / $this->amps;
@@ -101,7 +101,7 @@ class Ohmlaw
             $this->amps  = $this->volts / $this->ohms;
             $this->volts = sqrt(($this->watts * $this->ohms));
         }
-        elseif (is_numeric($volts) && $this->volts > 0)
+        elseif (is_numeric($this->volts) && $this->volts > 0)
         {
             $this->watts = pow($this->volts, 2) / $this->ohms;
             $this->amps  = sqrt(($this->watts/$this->ohms));

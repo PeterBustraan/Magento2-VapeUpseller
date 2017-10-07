@@ -41,7 +41,7 @@ class Ohmlaw extends \Magento\Framework\App\Action\Action
         {
             $request = $this->getRequest()->getParams();
 
-            $result = new \PeterBustraan\VapeCalculator\Model\Ohmlaw($request);
+            $result = new \PeterBustraan\VapeCalculator\Helper\Ohmlaw($request);
 
             $this->getResponse()->representJson($this->_jsonEncoder->encode($result->returnValues()));
 

@@ -7,7 +7,8 @@ The files from this repo should be placed within the app/code/ folder for your w
 You can however customize this if you know where to make the changes
 ## Road Map
 
-1. Implement clear buttons
+1. Implement clear buttons (50%)
+    1.Custom Valdiation
 2. Implement Wire length calculator
     1. Update Styling
     2. Allow for simplified and direct input

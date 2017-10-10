@@ -1,21 +1,25 @@
 <div class="vapeCalc">
     <div class="ohmCalculator">
         <span class="ohmLaws">
+            <div class="error-explainer"><h3>(X) Must Be A Number</h3><p>Please clear field or change to a proper number</p></div>
             <label>VOLTS : </label>
-            <input  data-validate='{"required":true}' type="text" maxlength="4" name="volts" id="volts" value="0.0">
+            <input  type="text" maxlength="4" name="volts" id="volts" value="0.0">
             <button data-field="volts" type="reset" class="action submit primary calcReset">Clear</button>
         </span>
         <span class="ohmLaws">
+            <div class="error-explainer"><h3>(X) Must Be A Number</h3><p>Please clear field or change to a proper number</p></div>
             <label>OHMS  : </label>
             <input type="text" maxlength="4" name="ohms"  id="ohms" value="0.0">
             <button data-field="ohms" type="reset" class="action submit primary calcReset">Clear</button>
         </span>
         <span class="ohmLaws">
+            <div class="error-explainer"><h3>(X) Must Be A Number</h3><p>Please clear field or change to a proper number</p></div>
             <label>AMPS  : </label>
             <input type="text" maxlength="4" name="amps"  id="amps" value="0.0">
             <button data-field="amps" type="reset" class="action submit primary calcReset">Clear</button>
         </span>
         <span class="ohmLaws">
+            <div class="error-explainer"><h3>(X) Must Be A Number</h3><p>Please clear field or change to a proper number</p></div>
             <label>WATTS : </label>
             <input type="text" maxlength="4" name="watts" id="watts" value="0.0">
             <button data-field="watts" type="reset" class="action submit primary calcReset">Clear</button>
@@ -27,7 +31,7 @@
             </div>
     </div>
     <div class="wireCalc">
-        Ohms  : <input type="text" maxlength="4" name="ohms" value="0.0<?php //echo $this->volts ?>"><br>
+        Ohms  : <input type="text" maxlength="4" name="ohms" value="0.0"><br>
         <select name="material" id="material">
             <option value="Kanthal">Kanthal</option>
             <option value="Stainless Steel">Stainless Steel</option>
@@ -37,8 +41,10 @@
     </div>
     <div class="wireRecomendor">
         <div class="preview">
+            Preview Image
         </div>
         <div class="recmendedItems">
+            Recomended Products
         </div>
     </div>
 </div>

@@ -8,6 +8,30 @@
     {
       display: block;
     }
+
+    .error-explainer {
+      display: none;
+      position: absolute;
+      background: #fff;
+      border: 3px solid red;
+      padding: 0rem 1rem;
+      right: 20%;
+      z-index: 10;
+      top: -3rem;
+      max-width:18rem;
+
+      h3 {
+        margin-top: 0.4em;
+        margin-bottom: .2rem;
+        font-size: 1.5rem;
+        border-bottom: 1px solid;
+      }
+
+      p {
+        margin: auto;
+        font-size: 1.2rem;
+      }
+    }
   }
 }
 
@@ -26,15 +50,34 @@
       display: flex;
       justify-content: flex-end;
       margin-top: 1rem;
+      position: relative;
+
+      @media (max-width:822px) {
+        display: block;
+      }
+
+      @media (max-width: 769px)
+      {
+        display: flex;
+      }
 
       label {
         margin-right: 2rem;
         font-size : 1.6rem;
+
+        @media (max-width: 1286px) {
+          margin: auto;
+          font-size: inherit;
+        }
       }
 
       input {
         width: 50%;
         margin: auto 2rem;
+
+        @media (max-width: 1095px) {
+          margin: auto;
+        }
       }
     }
 
@@ -46,8 +89,27 @@
         font-size: 4rem;
         padding: 2rem;
       }
-
     }
   }
+}
+.wireCalc {
+  @media screen {
+    width: 30%;
+    margin-right: 5rem;
 
+    @media (max-width: 769px) {
+      width: auto;
+      margin: auto;
+    }
+  }
+}
+.wireRecomendor {
+  @media screen {
+    width: 30%;
+
+    @media (max-width: 769px) {
+      width: auto;
+      margin: auto;
+    }
+  }
 }

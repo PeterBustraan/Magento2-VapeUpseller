@@ -7,11 +7,20 @@ function main($, AjaxUrl) {
 
         $(".calcReset").click(function () {
             clearField("#" + $(this).data("field"))
+        });
+        
+        $(".error-explainer").click(function () {
+            $(this).hide();
+        });
+
+        $(".ohmLaws > input").keyup(function() {
+            validate($(this).val(),this);
         })
 
     function OhmsLaw() {
         let details =
             {
+                'ajax'  : '1',
                 'volts' : $("#volts").val(),
                 'amps'  : $("#amps").val(),
                 'ohms'  : $("#ohms").val(),
@@ -28,6 +37,22 @@ function main($, AjaxUrl) {
             $("#ohms").val(data.ohms)
             $("#watts").val(data.watts)
         })
+    }
+
+    function validate(value,field) {
+        if (isNaN(value)) {
+            showError(field)
+        }else {
+            hideError(field)
+        }
+    }
+
+    function showError(field) {
+        $(field).closest(".ohmLaws").find(".error-explainer").show();
+    }
+
+    function hideError(field) {
+        $(field).closest(".ohmLaws").find(".error-explainer").hide();
     }
 
     function clearField(field) {

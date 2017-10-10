@@ -7,9 +7,9 @@ The files from this repo should be placed within the app/code/ folder for your w
 You can however customize this if you know where to make the changes
 ## Road Map
 
-1. Implement clear buttons (50%)
-    1. Custom Valdiation
-2. Implement Wire length calculator
+1. Implement clear buttons (done)
+    1. Custom Validation (done: tweaks pending in final)
+2. Implement Wire length calculator (imminent)
     1. Update Styling
     2. Allow for simplified and direct input
 3. Model Product Recommendation
